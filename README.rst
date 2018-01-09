@@ -1,21 +1,21 @@
 ================================
-python-anyconfig-cbor-backend
+python-anyconfig-ion-backend
 ================================
 
-.. image:: https://img.shields.io/travis/ssato/python-anyconfig-cbor-backend.svg
-   :target: https://travis-ci.org/ssato/python-anyconfig-cbor-backend
+.. image:: https://img.shields.io/travis/ssato/python-anyconfig-ion-backend.svg
+   :target: https://travis-ci.org/ssato/python-anyconfig-ion-backend
    :alt: Test status
 
-.. image:: https://img.shields.io/coveralls/ssato/python-anyconfig-cbor-backend.svg
-   :target: https://coveralls.io/r/ssato/python-anyconfig-cbor-backend
+.. image:: https://img.shields.io/coveralls/ssato/python-anyconfig-ion-backend.svg
+   :target: https://coveralls.io/r/ssato/python-anyconfig-ion-backend
    :alt: Coverage Status
 
-.. image:: https://landscape.io/github/ssato/python-anyconfig-cbor-backend/master/landscape.png
-   :target: https://landscape.io/github/ssato/python-anyconfig-cbor-backend/master
+.. image:: https://landscape.io/github/ssato/python-anyconfig-ion-backend/master/landscape.png
+   :target: https://landscape.io/github/ssato/python-anyconfig-ion-backend/master
    :alt: Code Health
 
-This is a backend module for python-anyconfig to support to load and dump CBOR
-files with using cbor, https://pypi.python.org/pypi/cbor.
+This is a backend module for python-anyconfig to support to load and dump
+Amazon Ion data files.
 
 - Author: Satoru SATOH <ssato@redhat.com>
 - License: MIT
@@ -23,11 +23,11 @@ files with using cbor, https://pypi.python.org/pypi/cbor.
 SEE ALSO:
 
 - python-anyconfig: https://pypi.python.org/pypi/anyconfig
-- CBOR spec: http://cbor.io
+- Amazon Ion: https://amzn.github.io/ion-docs/
 - Download:
 
-  - PyPI: https://pypi.python.org/pypi/anyconfig-cbor-backend
-  - Copr RPM repos: https://copr.fedoraproject.org/coprs/ssato/python-anyconfig/
+  - PyPI: https://pypi.python.org/pypi/anyconfig-ion-backend (Not yet)
+  - Copr RPM repos: https://copr.fedoraproject.org/coprs/ssato/python-anyconfig/ (Not yet)
 
 Build & Install
 ================
