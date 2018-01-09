@@ -1,0 +1,43 @@
+#
+# Copyright (C) 2018 Satoru SATOH <satoru.satoh @ gmail.com>
+# License: MIT
+#
+# pylint: disable=missing-docstring,invalid-name
+from __future__ import absolute_import, print_function
+
+import os.path
+import os
+import unittest
+
+import anyconfig
+
+from tests.common import _bytes, dicts_equal
+
+
+_CURDIR = os.path.dirname(__file__)
+_CNF_0 = {_bytes('a'): 0,
+          _bytes('b'): _bytes('bbb'),
+          _bytes('c'): 5,
+          _bytes('sect0'): {_bytes('d'): [_bytes('x'), _bytes('y'),
+                                          _bytes('z')]}}
+
+
+class Test(unittest.TestCase):
+
+    def _try_load(self, fname="ion.txt_data"):
+        try:
+            filepath = os.path.join(_CURDIR, fname)
+            cnf = anyconfig.load(filepath, ac_parser="ion")
+        except anyconfig.UnknownFileTypeError:
+            print("all types=%r" % anyconfig.list_types())
+            raise
+
+        self.assertTrue(dicts_equal(cnf, _CNF_0))
+
+    def test_20_load_text(self):
+        self._try_load()
+
+    def test_22_load_bin(self):
+        self._try_load(fname="ion.bin_data")
+
+# vim:sw=4:ts=4:et:

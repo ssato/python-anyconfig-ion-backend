@@ -1,0 +1,7 @@
+anyconfig
+amazon.ion
+coveralls
+# flake8  # disabled until 'pkg_resources.VersionConflict' error.
+nose
+pycodestyle
+pylint
