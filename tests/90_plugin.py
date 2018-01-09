@@ -11,15 +11,14 @@ import unittest
 
 import anyconfig
 
-from tests.common import _bytes, dicts_equal
+from tests.common import dicts_equal
 
 
 _CURDIR = os.path.dirname(__file__)
-_CNF_0 = {_bytes('a'): 0,
-          _bytes('b'): _bytes('bbb'),
-          _bytes('c'): 5,
-          _bytes('sect0'): {_bytes('d'): [_bytes('x'), _bytes('y'),
-                                          _bytes('z')]}}
+_CNF_0 = {u'a': 0,
+          u'b': u'bbb',
+          u'c': 5,
+          u'sect0': {u'd': [u'x', u'y', u'z']}}
 
 
 class Test_90(unittest.TestCase):
@@ -32,7 +31,7 @@ class Test_90(unittest.TestCase):
             print("all types=%r" % anyconfig.list_types())
             raise
 
-        self.assertTrue(dicts_equal(cnf, _CNF_0))
+        self.assertTrue(dicts_equal(cnf, _CNF_0), "%r vs. %r" % (cnf, _CNF_0))
 
     def test_90_load_text(self):
         self._try_load()

@@ -8,7 +8,7 @@ from __future__ import absolute_import
 import anyconfig_ion_backend.ion as TT
 import tests.common as TBC
 
-_CNF_S = """\
+_CNF_S = u"""\
 $ion_1_0 {'a':0,'c':5,'b':"bbb",'sect0':{'d':["x","y","z"]}}"""
 
 
@@ -17,7 +17,7 @@ class HasParserTrait(TBC.HasParserTrait):
     psr = TT.Parser()
     cnf = {u"a": 0, u"b": u"bbb", u"c": 5,
            u"sect0": {u"d": [u"x", u"y", u"z"]}}
-    cnf_s = _CNF_S
+    cnf_s = TBC._bytes(_CNF_S)
 
 
 class Test_10(TBC.Test_10_dumps_and_loads, HasParserTrait):
