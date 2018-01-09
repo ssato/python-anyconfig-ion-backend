@@ -2,6 +2,10 @@
 python-anyconfig-ion-backend
 ================================
 
+.. .. image:: https://img.shields.io/pypi/v/anyconfig-ion-backend.svg
+   :target: https://pypi.python.org/pypi/anyconfig-ion-backend/
+   :alt: [Latest Version]
+
 .. image:: https://img.shields.io/travis/ssato/python-anyconfig-ion-backend.svg
    :target: https://travis-ci.org/ssato/python-anyconfig-ion-backend
    :alt: Test status
