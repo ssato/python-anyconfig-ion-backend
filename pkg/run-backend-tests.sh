@@ -13,7 +13,7 @@ topdir=${curdir}/../
 runtest_sh=${curdir}/runtest.sh
 
 bash ${runtest_sh} ${topdir}/anyconfig_*_backend/
-for f in ${topdir}/tests/*.py; do
+for f in $(echo ${topdir}/tests/*.py | sort); do
     bash ${runtest_sh} $f
 done
 
