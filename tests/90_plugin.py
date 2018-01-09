@@ -22,7 +22,7 @@ _CNF_0 = {_bytes('a'): 0,
                                           _bytes('z')]}}
 
 
-class Test(unittest.TestCase):
+class Test_90(unittest.TestCase):
 
     def _try_load(self, fname="ion.txt_data"):
         try:
@@ -34,10 +34,10 @@ class Test(unittest.TestCase):
 
         self.assertTrue(dicts_equal(cnf, _CNF_0))
 
-    def test_20_load_text(self):
+    def test_90_load_text(self):
         self._try_load()
 
-    def test_22_load_bin(self):
+    def test_92_load_bin(self):
         self._try_load(fname="ion.bin_data")
 
 # vim:sw=4:ts=4:et:
