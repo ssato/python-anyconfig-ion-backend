@@ -35,7 +35,8 @@ env:
   #  - WITH_DEPS=true
   #  - WITH_DEPS=false
 script:
-    - "./pkg/run-backend-tests.sh"
+#    - "./pkg/run-backend-tests.sh"
+    - tox
 after_success:
   - coveralls
 notifications:
