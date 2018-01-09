@@ -17,4 +17,7 @@ for f in $(echo ${topdir}/tests/*.py | sort); do
     bash ${runtest_sh} $f
 done
 
+coverage run --source=${topdir}/anyconfig_*_backend/*.py,tests/*.py
+coverage report -m
+
 # vim:sw=4:ts=4:et:
