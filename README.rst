@@ -30,8 +30,8 @@ SEE ALSO:
 - Amazon Ion: https://amzn.github.io/ion-docs/
 - Download:
 
-  - PyPI: https://pypi.python.org/pypi/anyconfig-ion-backend (Not yet)
-  - Copr RPM repos: https://copr.fedoraproject.org/coprs/ssato/python-anyconfig/ (Not yet)
+  - PyPI: https://pypi.python.org/pypi/anyconfig-ion-backend
+  - Copr RPM repos: https://copr.fedoraproject.org/coprs/ssato/python-anyconfig/
 
 Build & Install
 ================
