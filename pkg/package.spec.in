@@ -89,5 +89,8 @@ Requires:       python3-amazon-ion
 %endif
 
 %changelog
+* Sun Jan 14 2018 Satoru SATOH <ssato@redhat.com> - 0.0.2-1
+- Just some package cleanups and doc updates
+
 * Mon Jan  8 2018 Satoru SATOH <ssato@redhat.com> - 0.0.1-1
 - Initial packaging
