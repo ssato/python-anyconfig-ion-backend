@@ -2,7 +2,7 @@
 python-anyconfig-ion-backend
 ================================
 
-.. .. image:: https://img.shields.io/pypi/v/anyconfig-ion-backend.svg
+.. image:: https://img.shields.io/pypi/v/anyconfig-ion-backend.svg
    :target: https://pypi.python.org/pypi/anyconfig-ion-backend/
    :alt: [Latest Version]
 
