@@ -14,9 +14,9 @@ runtest_sh=${curdir}/runtest.sh
 
 moddir=$(ls -d1 ${topdir}/anyconfig_*_backend/ | head -n 1)
 
-WITH_COVERAGE=1 bash ${runtest_sh} ${moddir}
+bash ${runtest_sh} ${moddir}
 for f in $(echo ${topdir}/tests/*.py | sort); do
-    WITH_COVERAGE=1 bash ${runtest_sh} $f
+    bash ${runtest_sh} $f
 done
 
 #coverage run --source=${moddir},tests/
