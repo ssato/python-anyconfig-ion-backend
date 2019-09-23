@@ -1,2 +1,0 @@
-[anyconfig_backends]
-ion=anyconfig_ion_backend:Parser
