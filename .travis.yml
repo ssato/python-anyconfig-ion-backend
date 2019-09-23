@@ -1,29 +1,27 @@
 # see: http://about.travis-ci.org/docs/user/languages/python/
 language: python
 python:
-  - 2.7
-  - 3.3
-  - 3.4
-  - 3.5
-  - 3.6
+    - 2.7
+    - 3.6
 # see: http://docs.travis-ci.com/user/caching/#pip-cache
 cache: pip
+# .. seealso:: https://github.com/travis-ci/travis-ci/issues/9815
+matrix:
+    include:
+        - python: 3.7
+          dist: xenial
+          sudo: true
+
 # see: http://docs.travis-ci.com/user/migrating-from-legacy/
 sudo: false
 install:
-  - if [[ $TRAVIS_PYTHON_VERSION = '3.3' || $TRAVIS_PYTHON_VERSION = '3.4' ]]; then pip install --upgrade pip; fi
-  - pip install -r pkg/test_requirements.txt
-env:
-  global:
-    - WITH_COVERAGE=1
-    - WITH_DEPS=true
+    - pip install tox-travis
 script:
-#  - "./pkg/run-backend-tests.sh"
-  - tox
+    - tox
 after_success:
   - coveralls
 notifications:
-  email:
-    recipients:
-      - satoru.satoh+github@gmail.com
-    on_failure: always
+    email:
+        recipients:
+            - satoru.satoh+github@gmail.com
+        on_failure: always
