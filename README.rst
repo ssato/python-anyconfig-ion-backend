@@ -21,7 +21,7 @@ python-anyconfig-ion-backend
 This is a backend module for python-anyconfig to support to load and dump
 Amazon Ion data files.
 
-- Author: Satoru SATOH <ssato@redhat.com>
+- Author: Satoru SATOH <satoru.satoh@gmail.com>
 - License: MIT
 
 SEE ALSO:
@@ -36,17 +36,17 @@ SEE ALSO:
 Build & Install
 ================
 
-If you're Fedora or Red Hat Enterprise Linux user, try::
+- Pre-built Binary RPMs from my copr repos, https://copr.fedoraproject.org/coprs/ssato/python-anyconfig/
 
-  $ python setup.py srpm && mock dist/<package>-<ver_dist>.src.rpm
-  
-or::
+  ::
 
-  $ python setup.py rpm
+      # Example commands to install pre-built RPMs
+      $ sudo dnf copr enable ssato/python-anyconfig
+      $ sudo dnf install -y python3-anyconfig-ion-backend
 
-and install built RPMs. 
-
-Otherwise, try usual ways to build and/or install python modules such like
-'python setup.py bdist', etc.
+- PyPI: pip3 install anyconfig-ion-backend
+- pip from git repo: pip3 install git+https://github.com/ssato/python-anyconfig-ion-backend/
+- Build SRPMs, RPMs and install it: python3 setup.py bdist_rpm --source-only && mock dist/python3-anyconfig-\*-backend-<ver_dist>.src.rpm
+- Others: try usual ways to build and/or install python modules such like 'python setup.py bdist', etc.
 
 .. vim:sw=2:ts=2:et:
