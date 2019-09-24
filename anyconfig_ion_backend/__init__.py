@@ -4,5 +4,5 @@
 from __future__ import absolute_import
 from .ion import Parser
 
-__version__ = "0.0.2"
+__version__ = "0.1.0"
 __all__ = ["Parser"]
