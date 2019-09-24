@@ -2,5 +2,7 @@ include LICENSE.MIT
 include MANIFEST.in
 include README.*
 include pkg/*
-include setup.py
+include setup.*
 recursive-include anyconfig_ion_backend *.py
+recursive-include tests *.py *.*_data *.bats
+
