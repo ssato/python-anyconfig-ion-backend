@@ -25,7 +25,7 @@ class Test_90(unittest.TestCase):
 
     def _try_load(self, fname="ion.txt_data"):
         try:
-            filepath = os.path.join(_CURDIR, fname)
+            filepath = os.path.join(_CURDIR, "res", fname)
             cnf = anyconfig.load(filepath, ac_parser="ion")
         except anyconfig.UnknownFileTypeError:
             print("all types=%r" % anyconfig.list_types())

@@ -5,7 +5,7 @@
 # pylint: disable=missing-docstring,invalid-name,too-few-public-methods
 from __future__ import absolute_import
 
-import anyconfig_ion_backend.ion as TT
+import anyconfig_ion_backend as TT
 import tests.common as TBC
 
 _CNF_S = u"""\

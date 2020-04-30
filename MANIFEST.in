@@ -1,8 +1,11 @@
+include *.txt
 include LICENSE.MIT
 include MANIFEST.in
+include NEWS
 include README.*
 include pkg/*
 include setup.*
-recursive-include anyconfig_ion_backend *.py
-recursive-include tests *.py *.*_data *.bats
-
+include tox.ini
+include tests/res/*
+recursive-include src *.py
+recursive-include tests *.py *.bats *.txt
