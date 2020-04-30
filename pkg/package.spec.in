@@ -74,6 +74,9 @@ BuildRequires:  python3-setuptools
 %{python3_sitelib}/*
 
 %changelog
+* Fri May  1 2020 Satoru SATOH <satoru.satoh@gmail.com> - 0.1.1-1
+- New upstream release
+
 * Sun Jan 14 2018 Satoru SATOH <ssato@redhat.com> - 0.1.0-1
 - New upstream release
 
