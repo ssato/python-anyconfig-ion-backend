@@ -17,28 +17,28 @@ r"""Amazon Ion backend:
   - See also:
     https://github.com/amzn/ion-python/blob/master/amazon/ion/simpleion.py
 """
-from __future__ import absolute_import
+import inspect
+import io
 
 import amazon.ion.simpleion as SI
+
 import anyconfig.backend.base
-
-from anyconfig.compat import getargspec, IS_PYTHON_3
-
-if IS_PYTHON_3:
-    from io import BytesIO
-else:
-    from anyconfig.compat import StringIO as BytesIO
 
 
 class Parser(anyconfig.backend.base.StringStreamFnParser,
-             anyconfig.backend.base.BinaryFilesMixin):
+             anyconfig.backend.base.BinaryLoaderMixin,
+             anyconfig.backend.base.BinaryDumperMixin):
     """Parser for Amazon Ion data files.
     """
     _type = "ion"
-    _load_opts = [a for a in getargspec(SI.load).args
-                  if a not in "fp object_hook".split()]
-    _dump_opts = [a for a in getargspec(SI.dump).args
-                  if a not in "obj fp".split()]
+    _load_opts = [
+        a for a in inspect.getfullargspec(SI.load).args
+        if a not in {'fp', 'object_hook'}
+    ]
+    _dump_opts = [
+        a for a in inspect.getfullargspec(SI.dump).args
+        if a not in {'obj', 'fp'}
+    ]
     _orderd = True
     _dict_opts = ["object_pairs_hook", "object_hook"]
 
@@ -58,7 +58,7 @@ class Parser(anyconfig.backend.base.StringStreamFnParser,
 
         :return: container object holding the configuration data
         """
-        return self.load_from_stream(BytesIO(content), container, **kwargs)
+        return self.load_from_stream(io.BytesIO(content), container, **kwargs)
 
     def dump_to_string(self, cnf, **kwargs):
         """
@@ -69,7 +69,7 @@ class Parser(anyconfig.backend.base.StringStreamFnParser,
 
         :return: Dict-like object holding config parameters
         """
-        stream = BytesIO()
+        stream = io.BytesIO()
         self.dump_to_stream(cnf, stream, **kwargs)
         return stream.getvalue()
 
