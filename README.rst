@@ -14,10 +14,6 @@ python-anyconfig-ion-backend
    :target: https://coveralls.io/r/ssato/python-anyconfig-ion-backend
    :alt: Coverage Status
 
-.. image:: https://landscape.io/github/ssato/python-anyconfig-ion-backend/master/landscape.png
-   :target: https://landscape.io/github/ssato/python-anyconfig-ion-backend/master
-   :alt: Code Health
-
 This is a backend module for python-anyconfig to support to load and dump
 Amazon Ion data files.
 
